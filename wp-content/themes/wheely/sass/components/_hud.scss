@@ -1,0 +1,115 @@
+.hud-overlay {
+  background: white;
+  min-height: 100vh;
+}
+
+/* HUD window */
+.layout-fixed {
+  background: white;
+  
+  .w-page {
+    display: none;
+  }
+}
+
+.touch {
+
+  .layout-fixed {
+    overflow: visible;
+    position: relative;    
+    height: auto;
+  }
+}
+
+.hud-window {
+  position: relative;
+  background: white;
+  z-index: 101;
+}
+.hud-content {
+  padding: 17px;
+  min-width: 300px;
+  min-height: 50px;
+  text-align: left;
+}
+.hud-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: 45px;
+  width: 45px;
+  cursor:pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    background-color: #000;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    top: 20px;
+    left: 12px;
+    width: 21px;
+    height: 1px;
+  }
+
+  &::after {
+    top: 10px;
+    left: 22px;
+    height: 21px;
+    width: 1px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #424242;
+  }
+  &:active::before,
+  &:active::after {
+    background-color: #424242;
+  }
+}
+
+.hud-window button:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: $screen-sm-min) {
+  .hud-overlay {
+    position: fixed;
+    overflow: auto;
+    z-index: 100;
+    height: auto;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.6)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%);
+  }
+  
+  .layout-fixed {
+    overflow: hidden;
+
+    .w-page {
+      display: block;
+    }
+  }
+
+  .hud-window {
+    margin: 50px auto 100px;
+    max-width: 900px;
+    width: 440px;
+    border-radius: 4px;
+    
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}

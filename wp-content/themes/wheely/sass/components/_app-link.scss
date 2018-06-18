@@ -1,0 +1,112 @@
+$w-app-link_phone-min-width: ( m: 225px, l: 245px, xl: 313px);
+$w-app-link_dropdown-padding: ( m: 30px, l: 30px, xl: 40px );
+$w-app-link_dropdown-bg-shift: ( m: 20px, l: 20px, xl: 30px );
+$w-app-link_popover-top: (m: 37, l: 45px, xl: 49px );
+
+@mixin w-app-link($size: l, $theme: light) {
+  display: flex;
+
+  .wc-phone {
+    margin-right: $size_m;
+    min-width: map-get($w-app-link_phone-min-width, $size);
+    width: auto;
+  }
+
+  .w-btn, input[type="text"] {
+    @include w-app-link_typo($size);
+    @include w-app-link_sizing($size);
+    letter-spacing: 0px;
+  }
+
+  .custom-dropdown-placeholder {
+    @include w-app-link_sizing($size);
+    padding-right: map-get($w-app-link_dropdown-padding, $size);
+    background-position: calc(100% + #{map-get($w-app-link_dropdown-bg-shift, $size)}) center !important;
+  }
+
+  .custom-dropdown-text {
+    @include w-app-link_typo($size);
+  }
+
+  .custom-dropdown-popover {
+    top: map-get($w-app-link_popover-top, $size);
+  }
+
+  .wc-list_item {
+    @include text-techno(m);
+    color: black;
+  }
+
+  .w-app-link_ready {
+    display: none;
+  }
+
+  @if $theme == dark {
+    @include w-app-link__dark;
+  }
+}
+
+/* Typo mixin */
+$w-app-link_line-height: ( m: 34px, l: 41px, xl: 44px );
+$w-app-link_font-size: ( m: 14px, l: 16px, xl: 18px );
+$w-app-link_letter-spacing: ( m: 0.1px, l: 0.2px, xl: 0.5px );
+
+@mixin w-app-link_typo($size: l) {
+  line-height: map-get($w-app-link_line-height, $size);
+  font-size: map-get($w-app-link_font-size, $size);
+  letter-spacing: map-get($w-app-link_letter-spacing, $size);
+}
+
+/* Sizing mixin */
+$w-app-link_sizing-height: ( m: 34px, l: 41px, xl: 44px);
+$w-app-link_sizing-padding: (
+  m: $size_s,
+  l: $size_s,
+  xl: $size_m
+);
+
+@mixin w-app-link_sizing($size: l) {
+  height: map-get($w-app-link_sizing-height, $size);
+  padding: 0 map-get($w-app-link_sizing-padding, $size);
+}
+
+// Dark theme additional styles
+@mixin w-app-link__dark {
+  .w-app-link_phone,
+  .custom-dropdown-popover {
+    width: 265px;
+    min-width: initial;
+  }
+
+  .custom-dropdown-popover {
+    @include dropdown-popover-inverse;
+  }
+
+  .wc-list_item {
+    @include dropdown_item__inverse;
+
+    &.wc-list_item-selected {
+      @include dropdown_item__selected-inverse;
+    }
+  }
+
+  .custom-dropdown-placeholder {
+
+    &:focus {
+      box-shadow: none;
+      z-index: 0;
+    }
+  }
+
+  input {
+
+    &:focus {
+      border-color: transparent;
+      border-left-color: black;
+    }
+  }
+
+  .w-hint__error {
+    text-align: left;
+  }
+}

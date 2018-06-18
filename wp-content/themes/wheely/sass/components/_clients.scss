@@ -1,0 +1,47 @@
+.wc-clients {
+  @include size(margin-bottom, "calc( -1 * size_xl )");
+}
+
+.wc-clients_col {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default':   (0, 24, 24),
+    '<=desktop-s': (1, 22, 24)
+  ));
+}
+
+.wc-clients_logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  @include size(margin, "0 size_xl size_xl 0");
+}
+
+.wc-clients_logo-vertical {
+  width: auto;
+  height: 40px;
+}
+
+@media (min-width: $screen-sm-min) {
+
+  .wc-clients_logo {
+    width: 120px;
+  }
+
+  .wc-clients_logo-vertical {
+    width: auto;
+    height: 50px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+
+  .wc-clients_logo {
+    width: 150px;
+  }
+
+  .wc-clients_logo-vertical {
+    width: auto;
+    height: 80px;
+  }
+}

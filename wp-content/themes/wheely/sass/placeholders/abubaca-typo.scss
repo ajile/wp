@@ -1,0 +1,15 @@
+%abubaca {
+  p {
+    @include text-techno(m);
+  }
+
+  h1 {
+    @include title(xl);
+    margin: $size_xl 0 $size_l;
+  }
+
+  .w-subtitle {
+    @include title(m);
+    margin: $size_m 0 $size_s;
+  }
+}

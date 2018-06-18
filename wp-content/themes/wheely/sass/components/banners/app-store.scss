@@ -1,0 +1,36 @@
+/* Direct link to app store for mobile devices */
+.wc-banner__app-store {
+  display: none;
+  padding: $size_m $size_m 0;
+
+  @include media('<=tablet-s') {
+    display: block;
+  }
+
+  .wc-banner_artwork {
+    width: 153px;
+    margin: 0 auto;
+    bottom: 0;
+    top: auto;
+    height: 169px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wc-banner_text {
+    width: auto;
+    text-align: center;
+    margin-bottom: $size_m;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    margin-bottom: $size_m;
+  }
+}

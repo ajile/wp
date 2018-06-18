@@ -1,0 +1,19 @@
+.tabs {
+  .tabs-switcher-wrapper {
+    .tab-switcher {
+      &.active {
+        background: black;
+        color: white;
+        cursor: default;
+      }
+    }
+  }
+  .tabs-content-wrapper {
+    .tab-content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

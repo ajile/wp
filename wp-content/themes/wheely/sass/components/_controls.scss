@@ -1,0 +1,47 @@
+/* Custom dropdown */
+.custom-dropdown {
+	position: relative;
+}
+.custom-dropdown-placeholder {
+	position: relative;
+	@extend .w-form-item_select;
+}
+.custom-dropdown-text {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 40px;
+
+	@media (min-width: $screen-sm) {
+		line-height: 34px;
+	}
+}
+.custom-dropdown-popover {
+	position: absolute;
+	z-index: 10;
+	top: 46px;
+	width: 100%;
+	min-height: 20px;
+	background: #ffffff;
+	overflow: auto;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1),
+				      0 0 0 1px rgba(0, 0, 0, 0.04);
+
+	border-radius: 4px;
+	background-clip: padding-box;
+
+  @media (min-width: $screen-sm) {
+    top: 40px;
+  }
+}
+
+/* Custom Select */
+.custom-select {
+	position: relative;
+}
+.custom-select .list {
+  max-height: 300px;
+}
+.custom-select .list-item {
+	padding: 10px;
+}

@@ -1,0 +1,95 @@
+.wc-banner__get-link {
+  display: none;
+  padding: ($size_xl - 5) $size_xl;
+
+  @include media(">tablet-s") {
+    display: block;
+  }
+
+  @include media('<=tablet-m') {
+    padding: ($size_l - 3) $size_l;
+  }
+
+  /* Text */
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    margin-bottom: $size_xl;
+
+    @include media('<=tablet-m') {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.3;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  p {
+    margin: $size_l 0 $size_m;
+  }
+
+  .wc-banner_text {
+    width: 40%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .w-app-link {
+    position: relative;
+    z-index: 1;
+
+    @include media('>desktop-s') {
+      @include w-app-link(xl);
+    }
+
+    @include media('>tablet-m', '<=desktop-s') {
+      @include w-app-link(l);
+    }
+
+    @include media('>tablet-s', '<=tablet-m') {
+      @include w-app-link(m);
+    }
+  }
+
+  .w-app-link_ready {
+    width: 40%;
+    margin: 0;
+  }
+
+  /* Artwork */
+  .wc-banner_artwork {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+
+    .wc-banner_artwork-inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+
+  /* Link is sent text */
+  .wc-banner_text-ready {
+    display: none;
+
+    span {
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@mixin get-property($props, $prop, $state) {
+  @if $props and map-get($props, #{$prop}_#{$state}) {
+    #{$prop}: map-get($props, #{$prop}_#{$state});
+  }
+}

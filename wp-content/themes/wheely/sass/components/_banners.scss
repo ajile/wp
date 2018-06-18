@@ -1,0 +1,18 @@
+/* Banners */
+.wc-banners {
+  @include adaptive-grid-gutter();
+}
+
+.wc-banner {
+  position: relative;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  background: #FAFAFA;
+  @include adaptive-grid-column((
+    'default': (0, 24, 24),
+    '≤desktop-s': (1, 22, 24)
+  ));
+}
+
+@import "components/banners/app-store";
+@import "components/banners/get-link";

@@ -1,0 +1,32 @@
+.wc-list {
+	overflow: auto;
+}
+.wc-list_item {
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	cursor:pointer;
+	position:relative;
+	color: #000;
+	text-align: left;
+}
+.wc-list_item-last {
+	border-bottom: none;
+}
+.wc-list_item-selected {
+	color: #000;
+	background: #F1F1F1;
+}
+.location-picker .wc-list_item.wc-list_item-has-icon {
+	padding-left: 40px;
+}
+.wc-list_item-user-icon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+}
+.wc-list_item-item-has-sub .location-list-item {
+	padding-right: 15px;
+}
+.wc-list_item-has-right-icon {
+	padding-right: 20px;
+}

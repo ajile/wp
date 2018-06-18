@@ -1,0 +1,18 @@
+@mixin w-app-badges {
+  display: flex;
+
+  .w-app-badge {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 1);
+    display: inline-block;
+
+    img {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-right: $size_m;
+    }
+  }
+}

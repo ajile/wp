@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Stratos';
+  src: url('../assets/fonts/Stratos-Regular-Web.woff2') format('woff2'), url('../assets/fonts/Stratos-Regular-Web.woff') format('woff'), url('../assets/fonts/Stratos-Regular-Web.ttf') format('truetype');
+
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stratos';
+  src: url('../assets/fonts/Stratos-Italic-Web.woff2') format('woff2'), url('../assets/fonts/Stratos-Italic-Web.woff') format('woff'), url('../assets/fonts/Stratos-Italic-Web.ttf') format('truetype');
+
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Stratos';
+  src: url('../assets/fonts/Stratos-SemiBold-Web.woff2') format('woff2'), url('../assets/fonts/Stratos-SemiBold-Web.woff') format('woff'), url('../assets/fonts/Stratos-SemiBold-Web.ttf') format('truetype');
+
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stratos';
+  src: url('../assets/fonts/Stratos-SemiBold Italic-Web.woff2') format('woff2'), url('../assets/fonts/Stratos-SemiBold Italic-Web.woff') format('woff'), url('../assets/fonts/Stratos-SemiBold Italic-Web.ttf') format('truetype');
+
+  font-weight: 600;
+  font-style: italic;
+}

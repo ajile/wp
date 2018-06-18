@@ -1,0 +1,271 @@
+.w-footer {
+  @media print {
+    display: none;
+  }
+
+  // Reset old styles
+  border: none;
+  margin-top: 0;
+
+  // New styles
+  background-color: #f5f5f5;
+  padding: $size_xl 0;
+
+  @include media('<=tablet-m') {
+    padding-top: $size_l;
+  }
+
+  p {
+    @include text-techno(m);
+    color: white;
+
+    @include media('<=mobile-m') {
+      @include text-techno(s);
+      color: white;
+    }
+
+    &:not(:first-child) {
+      margin-top: $size_m;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $size_s;
+    }
+  }
+
+}
+
+.w-footer_col {
+  margin-bottom: 0;
+
+  a {
+    @include text-techno(m);
+    @include link(black);
+  }
+}
+
+.w-footer_col__left {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default': (0, 6, 24),
+    '<=desktop-s': (1, 5, 24),
+    '<=tablet-m': (1, 7, 24)
+  ));
+
+  @include media('<=tablet-s') {
+    display: none;
+  }
+}
+
+.w-footer_col__middle {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default': (0, 6, 24),
+    '<=desktop-s': (1, 6, 24),
+    '<=tablet-m': (1, 6, 24)
+  ));
+
+  @include media('<=tablet-s') {
+    display: none;
+  }
+}
+
+.w-footer_col__right {
+  @include adaptive-grid-column((
+    'default': (0, 12, 24),
+    '<=desktop-s': (0, 11, 24),
+    '<=tablet-m': (1, 7, 24),
+    '<=tablet-s': (6, 12, 24),
+    '<=mobile-l': (2, 20, 24)
+  ));
+}
+
+.w-footer_inner-col__links {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default': (0, 6, 12),
+    '<=desktop-s': (0, 6, 11),
+    '<=tablet-m': (0, 7, 7)
+  ));
+
+  @include media('<=tablet-s') {
+    display: none;
+  }
+}
+
+.w-footer_inner-col__icons {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default': (0, 6, 12),
+    '<=desktop-s': (0, 5, 11),
+    '<=tablet-m': (0, 7, 7),
+    '<=tablet-s': (0, 12, 12),
+    '<=mobile-l': (0, 20, 20)
+  ));
+
+  display: flex;
+
+  @include media('<=tablet-m', '>tablet-s') {
+    margin-top: $size_l;
+  }
+
+  @include media('<=tablet-s') {
+    justify-content: center;
+  }
+}
+
+.w-footer_icon {
+  display: block;
+  height: 26px;
+
+  &:not(:last-child) {
+    margin-right: $size_l;
+  }
+
+  svg {
+    display: block;
+    fill: #000000;
+
+    &:hover {
+      * {
+        fill: #3d3d3d;
+      }
+    }
+
+    &:active {
+      * {
+        fill: #3d3d3d;
+      }
+    }
+  }
+}
+
+/* Reduced mod */
+.w-footer__reduced {
+
+  .w-footer_col__right {
+    @include adaptive-grid-column((
+      'default': (0, 18, 24),
+      '<=desktop-s': (0, 17, 24),
+      '<=tablet-m': (1, 15, 24),
+      '<=tablet-s': (6, 12, 24),
+      '<=mobile-l': (2, 20, 24)
+    ));
+  }
+
+  .w-footer_inner-col__links {
+    @include adaptive-grid-column((
+      'default': (0, 6, 18),
+      '<=desktop-s': (0, 6, 17),
+      '<=tablet-m': (0, 7, 15),
+      '<=tablet-s': (0, 12, 12),
+      '<=mobile-l': (2, 20, 20)
+    ));
+  }
+
+  .w-footer_inner-col__icons {
+    @include adaptive-grid-column((
+      'default': (6, 6, 18),
+      '<=desktop-s': (6, 5, 17),
+      '<=tablet-m': (1, 7, 15),
+      '<=tablet-s': (0, 12, 12),
+      '<=mobile-l': (2, 16, 20)
+    ));
+
+    @include media('<=tablet-m', '>tablet-s') {
+      margin-top: 0;
+    }
+  }
+}
+
+/* Bottom links */
+.w-footer_bottom {
+  @include text-techno(s);
+  margin-top: $size_xl;
+  color: #616161;
+
+  a {
+    @include link(dark_grey);
+  }
+}
+
+.w-footer_bottom-col {
+  @include adaptive-grid-gutter();
+  @include adaptive-grid-column((
+    'default': (0, 24, 24),
+    '<=desktop-s': (1, 22, 24)
+  ));
+}
+
+.w-footer_bottom-inner {
+  display: flex;
+  padding-top: $size_m;
+  border-top: 1px solid #c2c2c2;
+
+  & > div {
+
+    &:not(:last-child) {
+      margin-right: $size_l;
+
+      @include media('<=tablet-s') {
+        margin-bottom: $size_s;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include media('<=tablet-s') {
+    display: block;
+    text-align: center;
+  }
+}
+
+// Dark Theme
+.w-footer__inverse {
+  background-color: #000;
+
+  .w-footer_col {
+
+    a {
+      @include link(white);
+    }
+  }
+
+  .w-footer_bottom {
+    color: #9e9e9e;
+  }
+
+  .w-footer_bottom-inner {
+    border-top-color: #c2c2c2;
+  }
+
+  .w-footer_bottom {
+
+    a {
+      @include link(light_grey);
+    }
+  }
+
+  .w-footer_icon {
+
+    svg {
+      display: block;
+
+      * {
+        fill: white;
+      }
+
+      &:hover {
+        * {
+          fill: #c2c2c2;
+        }
+      }
+
+      &:active {
+        * {
+          fill: #c2c2c2;
+        }
+      }
+    }
+  }
+}

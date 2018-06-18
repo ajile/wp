@@ -1,0 +1,4 @@
+%text-page-padding {
+  padding-top: calc(#{$size_xl} + #{$header-height});
+  padding-bottom: $size_xl;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "wheely",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wheely/abubaca": "1.0.0-alpha.3",
+    "@wheely/frontend-basis": "^5.3.0",
+    "@wheely/frontend-sprites": "^3.1.0"
+  }
+}

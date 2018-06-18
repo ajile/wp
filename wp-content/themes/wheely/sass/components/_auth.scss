@@ -1,0 +1,96 @@
+.wc-auth_middle:after {
+  display:block;
+  clear: both;
+  content: '';
+}
+
+.wc-auth_form .h1 span:first-child {
+  margin-right: 20px;
+}
+
+.auth-left, 
+.auth-right {
+  width: 270px;
+  float: left;
+}
+
+.auth-left {
+  padding-right: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.auth-right {
+  width: 269px;
+  padding-left: 20px;
+}
+
+.auth-clear {
+  clear: both;
+}
+
+.auth-button {
+
+}
+
+.auth-view button {
+  min-width: 150px;
+}
+
+.hud-window .auth-button button {
+  margin-bottom: 20px;
+}
+
+.w-auth-pin input {
+  width: 100px;
+}
+
+.w-auth-pin input[maxlength="1"] {
+  width: 45px;
+  margin-right: 10px;
+  text-align:center;
+  float: left;
+}
+
+.auth-agree {
+  color: #999;
+}
+
+.w-auth-pin {
+  .w-form-item:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .wc-auth-hud {
+    width: 600px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .hud-window.wc-auth-hud {
+    width: 620px;
+  }
+}
+
+.w-auth-pin {
+
+  .hud-content {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+
+  .wc-auth-hud {
+
+    [class*="col"] {
+
+      &:not(:last-of-type) {
+        @include size(margin-bottom, "size_l");
+      }
+    }
+  }
+}

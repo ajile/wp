@@ -1,0 +1,17 @@
+@mixin w-app-button {
+  .w-btn {
+    @include text-techno(l);
+    @include media('<=tablet-m') {
+      height: 40px;
+      line-height: 40px;
+      padding-left: $size_m;
+      padding-right: $size_m;
+    }
+  }
+
+  .w-app-button_hint {
+    @include text-techno(s);
+    margin-top: $size_m;
+    color: #666;
+  }
+}
